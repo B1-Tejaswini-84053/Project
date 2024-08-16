@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Individual Loan Applicantion</title>
+     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/fontawesome-all.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/swiper.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/magnific-popup.css')}}" rel="stylesheet">
+	<link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="{{url_for('static', filename='images/logo.svg')}}">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.svg')}}" alt="alternative"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+         <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.svg')}}"		alt="alternative"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#Predict">PREDICT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="report">VISUALIZE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#Insights">INSIGHTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+           
+        </div>
+    </nav> <!-- end of navbar -->
+	    </nav> <!-- end of navbar -->
+
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Loan Approval</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                        <a href="/">Home</a><i class="fa fa-angle-double-right"></i><span>Predict Individual Loan Approval</span>
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+
+
+    <!-- Terms Content -->
+    <div id="Predict" class="ex-basic-2">
+		<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Please Fill in the details to get your chances of Loan Approval.</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+							<!-- Contact Form -->
+								<form id="contactForm" data-toggle="validator" data-focus="false" action="{{ url_for('Individual') }}" method="POST">
+								<div class="form-group">
+									<input name="age" type="number" min="18" max="60" class="form-control-input" id="age" required>
+									<label class="label-control" for="age">Age of Applicant :</label>
+									<div class="help-block with-errors"></div>
+								</div>
+                                <div class="form-group">
+									<input name="monthly_inc" type="number" min="3000" max="10000000" class="form-control-input" id="monthly_inc" required>
+									<label class="label-control" for="annual_inc">Monthly Income :</label>
+									<div class="help-block with-errors"></div>
+								</div>
+								
+								<div class="form-group">
+									<input name="credit_score" type="number" min="300" max="900" class="form-control-input" id="credit_score" required>
+									<label class="label-control" for="credit_score">Credit Score :</label>
+									<div class="help-block with-errors"></div>
+								</div>
+                                <div class="form-group">
+									<input name="monthsEmployed" type="number" class="form-control-input" id="monthsEmployed" required min="1" max="360">
+									<label class="label-control" for="monthsEmployed">Enter number of months employed :</label>
+									<div class="help-block with-errors"></div>
+								</div>
+								<div class="form-group">
+									<input name="dti" class="form-control-input" type="number" min="0" max="40" id="dti" required>
+									<label class="label-control" for="dti">Current Debt to Income Ratio (0 to 100):</label>
+									<div class="help-block with-errors"></div>
+								</div>
+                                <div class="form-group">
+									<input name="interest_rate" class="form-control-input" type="number" min="2" max="30" id="interest_rate" required>
+									<label class="label-control" for="dti">Rate of Interest :</label>
+									<div class="help-block with-errors"></div>
+								</div>
+								
+                    </div> <!-- end of contact form -->
+                </div> 	<!-- end of text-container -->
+				                <div class="col-lg-6">
+                    <div class="text-container">
+							<!-- Contact Form -->
+                            <div class="form-group">
+                                <input name="loan_amnt" class="form-control-input" type="number" id="loan_amnt" required>
+                                <label class="label-control" for="loan_amnt">Loan Amount :</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+								
+							
+								
+								<div class="form-group">
+									<input name="education" list="verf_list" class="form-control-input" required select>
+									<label class="label-control" for="education">Education</label>
+									<datalist id="verf_list">
+									<option value="Bachelor's">
+									<option value="High School">
+									<option value="Master's">
+                                    <option value="PhD">
+									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>	
+								<div class="form-group">
+									<input name="hasMortgage" list="homes" class="form-control-input" required select>
+									<label class="label-control" for="mortgage">Has Mortgage</label>
+									<datalist id="homes">
+									<option value="Yes">
+									<option value="No">
+									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>
+                                <div class="form-group">
+									<input name="hasDependents" list="homes" class="form-control-input" required select>
+									<label class="label-control" for="hasDependents">Has Dependents</label>
+									<datalist id="homes">
+									<option value="Yes">
+									<option value="No">
+									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>
+                                <div class="form-group">
+									<input name="hasCoSigner" list="homes" class="form-control-input" required select>
+									<label class="label-control" for="hasCoSigner">Has Co-Signer</label>
+									<datalist id="homes">
+									<option value="Yes">
+									<option value="No">
+									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>
+
+			
+                    </div> <!-- end of contact form -->
+					</div> 	<!-- end of text-container -->
+                    <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
+					</form>
+					</div> <!-- end of container -->
+				<div class="result" align="center">
+						{% if result %}
+						{% for variable, value in original_input.items() %}
+						<br><b>{{ variable }}</b> : {{ value }}
+						{% endfor %}
+						<br>
+						<br> Loan Decision:
+						<p style="font-size:20px">{{ result }}</p>
+						{% endif %}
+				</div>
+		</div>
+    </div> <!-- end of ex-basic -->
+    <!-- end of terms content -->
+ 	  <!-- Details 2 -->
+	<div id="Insights" class="tabs">
+            <div class="row">
+      
+	  <div class="area-1">
+		
+
+            <div class="tabs-container">
+                
+                <!-- Tabs Links -->
+                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i>ROC AUC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i>Precision Recall</a>
+                    </li>
+                  
+                </ul>
+                <!-- end of tabs links -->
+                
+                <!-- Tabs Content -->
+                <div class="tab-content" id="ariaTabsContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                        <h4>ROC AUC Score</h4>
+                        <p>The following graph shows the ROC AUC Curve for different Machine Learning Models. CatBoost gives the best AUC.</p>
+                        
+                        <!-- Progress Bars -->
+                         <div class="col-lg-5 col-xl-6">
+                    <div class="image-container">
+                        <img class="card-image" src="{{url_for('static', filename='images/roc_curve_all_models.png')}}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                        <!-- end of progress bars -->
+                        
+                    </div> <!-- end of tab-pane --> 
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                        <h4>Precission Recall Score </h4>
+                        <p>The following graph shows the Precision Recall Curve for different Machine Learning Models. </p>
+                        
+                       <div class="col-lg-5 col-xl-6">
+                    <div class="image-container">
+                        <img class="card-image" src="{{url_for('static', filename='images/prc_curve_all_models.png')}}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                  
+                    <!-- end of tab -->
+
+                </div> <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
+            </div> <!-- end of tabs-container -->
+        </div>
+		<div class="area-2">
+		
+
+            <div class="tabs-container">
+                
+                <!-- Tabs Links -->
+                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="true"><i class="fas fa-th"></i>Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false"><i class="fas fa-th"></i>Confidence Interval</a>
+                    </li>
+                  
+                </ul>
+                <!-- end of tabs links -->
+                
+                <!-- Tabs Content -->
+                <div class="tab-content" id="ariaTabsContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                        <h4>CatBoost Feature Weights</h4>
+                        <p>The following graph gives the feature importance to predict the Loan Defaults.</p>
+                        
+                        <!-- Progress Bars -->
+                         <div class="col-lg-5 col-xl-6">
+                    <div class="image-container">
+                        <img class="card-image" src="{{url_for('static', filename='images/features_weight.PNG')}}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                        <!-- end of progress bars -->
+                        
+                    </div> <!-- end of tab-pane --> 
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                        <h4>CatBoost Confidence Interval</h4>
+                        <p>As we can see from the graph testing the model on random selection of subset of the lending data, AUC score everytime was around 0.95 </p>
+                        
+                       <div class="col-lg-5 col-xl-6">
+                    <div class="image-container">
+                        <img class="card-image" src="{{url_for('static', filename='images/threshold_Individual.png')}}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                  
+
+                </div> <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
+            </div> <!-- end of tabs-container -->
+        </div>
+		</div>
+    </div> <!-- end of tabs -->
+    <!-- end of details 2 -->
+
+    <!-- Footer -->
+    <div id="contact" class="footer">
+        <div class="container">
+            <div class="row">
+			<img class="card-image" src="{{url_for('static', filename='images/akshay.jpeg')}}"  width="150" height="150" alt="alternative">
+
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Developed by :</h4>
+                        <h2 class="white">Tejaswini Pethe</h2>
+						<p class="white">Completed PGDBDA From SunBeam Institute of Information Technology.</p>
+						<p class="white">Email: tejupethe14@gmail.com</p>
+
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Connect</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="https://www.linkedin.com/in/tejaswini-pethe-b78031179/">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a class="white" href="https://github.com/orgs/B1-Tejaswini-84053/repositories">Github</a>
+                            </li>
+                            
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Tools Used</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            
+                            <li>
+                               <a class="white" href="https://public.tableau.com/app/profile/tejaswini.pethe/viz/Project_Loan_Eligibility_Prediction/LoanpurposebyLoanAmount?publish=yes">Tableau</a>
+                            </li>
+                            
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+
+   <!-- end of copyright --> 
+    <!-- end of copyright -->
+    <!-- Scripts -->
+     <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="{{url_for('static', filename='js/popper.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/jquery.easing.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/morphext.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/isotope.pkgd.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/validator.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="{{url_for('static', filename='js/scripts.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="{{url_for('static', filename='js/swiper.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+
+</body>
+</html>
